@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        http://www.google.com/design/spec/style/color.html#color-themes
+        https://developer.android.com/training/material/compatibility.html#SupportLib
+        http://treyrobinson.net/blog/android-l-tutorials-part-2-material-theme-colors/
+    -->
+    <!--
+        http://paletton.com/palette.php?uid=13p0u0kuVGFjaMAoQIUFqvgFSo4
+    -->
+    <color name="primary">#3f9ab7</color>
+    <color name="primary_dark">#3d4f63</color>
+    <color name="accent">#ed6454</color>
+
+    <color name="red">#f44336</color>
+    <color name="green">#4caf50</color>
+</resources>

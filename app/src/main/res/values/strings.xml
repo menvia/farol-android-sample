@@ -1,0 +1,19 @@
+<resources>
+    <string name="app_name" translatable="false">Farol Sample</string>
+    <string name="bluetooth" translatable="false">Bluetooth</string>
+    <string name="bluetooth_le" translatable="false">Bluetooth Low Energy</string>
+    <string name="unsupported">incompatible</string>
+    <string name="supported">compatible</string>
+    <string name="disabled">disabled</string>
+    <string name="enabled">enabled</string>
+    <string name="scan_for_beacons">Scan for Beacons</string>
+    <string name="app_beacon_description">Use this app to locate beacons around you, measure distance to a beacon and get other relevant information about them.</string>
+    <string name="beacon_list">Beacon List</string>
+    <string name="scanning_for_beacons">Scanning for beacons...</string>
+    <string name="uuid" translatable="false">uuid</string>
+    <string name="major" translatable="false">Major</string>
+    <string name="minor" translatable="false">Minor</string>
+    <string name="farol_site" translatable="false">http://www.farol.me</string>
+    <string name="distance">Distance</string>
+    <string name="beacon_detail">Beacon Detail</string>
+</resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="distance">Distancia</string>
+    <string name="beacon_detail">Detalle Beacon</string>
+    <string name="beacon_list">Lista de Beacons</string>
+    <string name="disabled">discapacitado</string>
+    <string name="enabled">habilitado</string>
+    <string name="scan_for_beacons">Escanear en Busca de Beacons</string>
+    <string name="scanning_for_beacons">Escanear por beacons...</string>
+    <string name="supported">compatible</string>
+    <string name="unsupported">incompatible</string>
+    <string name="app_beacon_description">Utilice esta aplicación para localizar los Beacons a tu alrededor, medir la distancia a un Beacon y obtener otra información relevante acerca de ellos.</string>
+</resources>
