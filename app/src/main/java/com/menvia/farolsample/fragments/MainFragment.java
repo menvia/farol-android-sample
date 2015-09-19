@@ -22,8 +22,7 @@ public class MainFragment extends Fragment {
     private TextView mAppVersionTextView;
 
     public static MainFragment newInstance() {
-        MainFragment fragment = new MainFragment();
-        return fragment;
+        return new MainFragment();
     }
 
     public MainFragment() {

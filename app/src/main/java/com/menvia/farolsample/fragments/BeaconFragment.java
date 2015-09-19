@@ -56,7 +56,7 @@ public class BeaconFragment extends Fragment implements BeaconConsumer {
         mBeacon = getArguments().getParcelable(EXTRA_BEACON);
 
         // Beacon: simulator
-        if (false) BeaconManager.setBeaconSimulator(new BeaconSimulator());
+        if (BeaconSimulator.USE_SIMULATED_BEACONS) BeaconManager.setBeaconSimulator(new BeaconSimulator());
 
         // Beacon: set initial parameters and start scanning, if ble is present
         mBeaconManager = BeaconManager.getInstanceForApplication(getActivity());
@@ -150,7 +150,7 @@ public class BeaconFragment extends Fragment implements BeaconConsumer {
         return getActivity().bindService(intent, serviceConnection, i);
     }
 
-    public void loadBeacon() {
+    private void loadBeacon() {
         if (mBeacon != null) {
             mBeaconUUIDTextView.setText(mBeacon.getId1().toString());
             mBeaconMajorTextView.setText(mBeacon.getId2().toString());

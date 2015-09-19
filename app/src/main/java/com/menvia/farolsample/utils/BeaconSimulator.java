@@ -13,10 +13,10 @@ public class BeaconSimulator implements org.altbeacon.beacon.simulator.BeaconSim
     protected static final String TAG = "TimedBeaconSimulator";
     private List<Beacon> beacons;
 
-    public boolean USE_SIMULATED_BEACONS = true;
+    public static boolean USE_SIMULATED_BEACONS = false;
 
     public BeaconSimulator() {
-        beacons = new ArrayList<Beacon>();
+        beacons = new ArrayList<>();
     }
 
     public List<Beacon> getBeacons() {
@@ -25,7 +25,7 @@ public class BeaconSimulator implements org.altbeacon.beacon.simulator.BeaconSim
 
     private ArrayList<Beacon> createBeacons(int number_of_beacons) {
         if (number_of_beacons <= 0) number_of_beacons = 4;
-        ArrayList<Beacon> b = new ArrayList<Beacon>();
+        ArrayList<Beacon> b = new ArrayList<>();
         for (int i = 1; i <= number_of_beacons; i++) {
             beacons.add(new AltBeacon.Builder().setId1("11111111-2222-3333-4444-555555555555")
                     .setId2("1").setId3(Integer.toString(i)).setRssi(-55).setTxPower(-55).build());
@@ -45,7 +45,7 @@ public class BeaconSimulator implements org.altbeacon.beacon.simulator.BeaconSim
         if (USE_SIMULATED_BEACONS) {
             beacons.addAll(createBeacons(4));
 
-            final List<Beacon> finalBeacons = new ArrayList<Beacon>(beacons);
+            final List<Beacon> finalBeacons = new ArrayList<>(beacons);
 
             beacons.clear();
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.content.ServiceConnection;
 import android.os.Bundle;
 import android.os.RemoteException;
+import android.support.annotation.NonNull;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -36,8 +37,7 @@ public class BeaconListFragment extends ListFragment implements BeaconConsumer {
     private BeaconListAdapter mAdapter;
 
     public static BeaconListFragment newInstance() {
-        BeaconListFragment fragment = new BeaconListFragment();
-        return fragment;
+        return new BeaconListFragment();
     }
 
     public BeaconListFragment() {
@@ -53,7 +53,7 @@ public class BeaconListFragment extends ListFragment implements BeaconConsumer {
         setListAdapter(mAdapter);
 
         // Beacon: simulator
-        if (false) BeaconManager.setBeaconSimulator(new BeaconSimulator());
+        if (BeaconSimulator.USE_SIMULATED_BEACONS) BeaconManager.setBeaconSimulator(new BeaconSimulator());
 
         // Beacon: set initial parameters and start scanning, if ble is present
         mBeaconManager = BeaconManager.getInstanceForApplication(getActivity());
@@ -62,7 +62,7 @@ public class BeaconListFragment extends ListFragment implements BeaconConsumer {
     }
 
     @Override
-    public View onCreateView(LayoutInflater inflater, ViewGroup container,
+    public View onCreateView(@NonNull LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.fragment_beacon_list, container, false);
 
